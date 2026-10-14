@@ -1,0 +1,106 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "hashed_password": "$2b$12$AapaYOqGGHRvKQB4AhDiX.tWx9y6MCbVi4uSbxoMF/FfW8apG8Bpy",
+      "role": "admin",
+      "created_at": {
+        "__type__": "datetime",
+        "value": "2026-08-23T13:05:38.294559"
+      },
+      "_id": "3f5d4c14-9aee-457b-b678-67c79a8c02b1"
+    },
+    {
+      "username": "operator",
+      "hashed_password": "$2b$12$1kMgWsFmpRvtkGJLeXTfn.i7p/UvwlbtqYqX14mDBRRbtLqexdEfO",
+      "role": "operator",
+      "created_at": {
+        "__type__": "datetime",
+        "value": "2026-08-23T13:05:38.602593"
+      },
+      "_id": "c11643b0-3f1f-42e2-89a8-7b85c80c5eb0"
+    }
+  ],
+  "cameras": [
+    {
+      "camera_id": "CAM01",
+      "name": "CAM 01 \u2014 North Junction",
+      "location": "North Intersection",
+      "ip": "192.168.1.101",
+      "mode": "demo",
+      "fps": 25,
+      "status": "online",
+      "created_at": {
+        "__type__": "datetime",
+        "value": "2026-08-23T13:05:38.604541"
+      },
+      "_id": "a37c7759-06de-415d-9197-e5afaa79b54b",
+      "demo_video": "uploads\\CAM01_13488560_2160_3840_19fps.mp4"
+    },
+    {
+      "camera_id": "CAM02",
+      "name": "CAM 02 \u2014 East Corridor",
+      "location": "East Expressway",
+      "ip": "192.168.1.102",
+      "mode": "demo",
+      "fps": 25,
+      "status": "online",
+      "created_at": {
+        "__type__": "datetime",
+        "value": "2026-08-23T13:05:38.606691"
+      },
+      "_id": "35adbf69-80e7-445a-996e-f3331cce741f"
+    },
+    {
+      "camera_id": "CAM03",
+      "name": "CAM 03 \u2014 South Highway",
+      "location": "South Overpass",
+      "ip": "192.168.1.103",
+      "mode": "demo",
+      "fps": 25,
+      "status": "online",
+      "created_at": {
+        "__type__": "datetime",
+        "value": "2026-08-23T13:05:38.607910"
+      },
+      "_id": "b0576dbd-7313-4db5-9d99-087ae78a146b"
+    },
+    {
+      "camera_id": "CAM04",
+      "name": "CAM 04 \u2014 West Bridge",
+      "location": "West River Crossing",
+      "ip": "192.168.1.104",
+      "mode": "demo",
+      "fps": 25,
+      "status": "online",
+      "created_at": {
+        "__type__": "datetime",
+        "value": "2026-08-23T13:05:38.609700"
+      },
+      "_id": "c24de4d1-8877-4fd9-ae6b-2271919ff0d3"
+    }
+  ],
+  "traffic_records": [
+    {
+      "camera_id": "CAM03",
+      "camera_name": "CAM 03 \u2014 South Highway",
+      "timestamp": {
+        "__type__": "datetime",
+        "value": "2026-08-23T13:06:46.707859"
+      },
+      "vehicle_counts": {
+        "total": 8,
+        "cars": 4,
+        "bikes": 3,
+        "autos": 1,
+        "buses": 0,
+        "trucks": 0
+      },
+      "density": "Medium",
+      "incident_detected": false,
+      "emergency_vehicle": false,
+      "fps": 25.0,
+      "_id": "6801161d-afcd-4ad3-afe3-380dc0d9cc5b"
+    }
+  ]
+}

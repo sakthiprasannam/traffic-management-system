@@ -1,0 +1,44 @@
+# Custom Traffic Detection Dataset Configuration
+# ──────────────────────────────────────────────
+# Use this file for training a custom YOLOv8 model on your own traffic dataset.
+# The pretrained yolov8s.pt model works without custom training.
+# Use this ONLY when you have labeled traffic images.
+#
+# Recommended tool: Roboflow, CVAT, or LabelImg for labeling.
+#
+# Training command:
+#   yolo train model=yolov8s.pt data=dataset.yaml epochs=100 imgsz=960
+#
+# Validation command:
+#   yolo val model=runs/detect/train/weights/best.pt data=dataset.yaml
+#   (This will report real Precision, Recall, mAP@50, mAP@50-95)
+#
+# IMPORTANT: Never claim accuracy numbers without running actual validation.
+
+path: ./datasets/traffic    # Root path to your dataset
+train: images/train         # Training images (relative to path)
+val: images/val             # Validation images (relative to path)
+test: images/test           # Test images (optional, relative to path)
+
+# Number of vehicle classes
+nc: 5
+
+# Class names — must match your dataset labels exactly
+names:
+  0: car
+  1: motorbike
+  2: bus
+  3: truck
+  4: auto_rickshaw
+
+# ── Class Notes ───────────────────────────────────────────────────────────
+# Class 0 (car):          Standard passenger cars, SUVs, vans
+# Class 1 (motorbike):    Motorcycles, scooters, mopeds
+# Class 2 (bus):          City buses, school buses, coaches
+# Class 3 (truck):        Pickup trucks, lorries, heavy vehicles
+# Class 4 (auto_rickshaw): Three-wheeled auto-rickshaws (tuk-tuks)
+#
+# ── Recommended Dataset Size ─────────────────────────────────────────────
+# Minimum: 500 images per class
+# Recommended: 2000+ images per class for production accuracy
+# Resolution: Capture at same resolution as deployment cameras (at least 960p)
